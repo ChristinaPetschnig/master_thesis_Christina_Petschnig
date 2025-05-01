@@ -1,49 +1,51 @@
 # master_thesis_named_entity_recognition
 
-Repository Structure
-1) dataset_manually_annotated
-Contains the manually annotated articles, which serve as the ground truth for evaluation.
+# Repository Structure
 
-The output/ subfolder includes the extracted entities from these articles.
+## 1) `dataset_manually_annotated`
 
-2) gliner
-fine-tuning/
-Includes synthetically generated datasets for fine-tuning.
+- Contains the manually annotated articles, which serve as the ground truth for evaluation.  
+- The `output/` subfolder includes the extracted entities from these articles.
 
-Contains the fine-tuned models.
+## 2) `gliner`
 
-Stores loss curves.
+### `fine-tuning/`
 
-Includes the Jupyter Notebook used for fine-tuning on Google Colab with different configurations.
+- Includes synthetically generated datasets for fine-tuning.  
+- Contains the fine-tuned models.  
+- Stores loss curves.  
+- Includes the Jupyter Notebook used for fine-tuning on Google Colab with different configurations.
 
-dataset/
-Contains tokenized articles prepared for Gliner, due to its token length limit.
+### `dataset/`
 
-tests/
-quality_tests/
-Contains tests for label refinement.
+- Contains tokenized articles prepared for Gliner, due to its token length limit.
 
-Each test includes two files:
+### `tests/`
 
-Files starting with gliner... are used to send labels to the model and process predictions.
+#### `quality_tests/`
 
-Files starting with matching... calculate evaluation metrics such as precision, recall, and F1 score.
+- Contains tests for label refinement.  
+- Each test includes two files:
+  - Files starting with `gliner...` are used to send labels to the model and process predictions.  
+  - Files starting with `matching...` calculate evaluation metrics such as precision, recall, and F1 score.  
+- The `output/` subfolder contains plots of the test results.
 
-The output/ subfolder contains plots of the test results.
+#### `quantity_tests/`
 
-quantity_tests/
-Tests using the final label set on different models (also includes tests using the base label set on Gliner Large News v2.1).
+- Tests using the final label set on different models (also includes tests using the base label set on Gliner Large News v2.1).  
+- The specific model used is indicated in the file names.  
+- The `output/` subfolder contains plots visualizing these outcomes.
 
-The specific model used is indicated in the file names.
+## 3) `gpt-4o-mini`
 
-The output/ subfolder contains plots visualizing these outcomes.
+- Contains the calculation of evaluation metrics using the GPT-4o-mini model.
 
-3) gpt-4o-mini
-Contains the calculation of evaluation metrics using the GPT-4o-mini model.
+## 4) `efficiency_tests`
 
-4) efficiency_tests
-Includes calculations for testing model efficiency.
+- Includes calculations for testing model efficiency.
 
-5) comparison
-Contains comparisons of the different models.
+## 5) `comparison`
+
+- Contains comparisons of the different models.
+
 
