@@ -1,4 +1,4 @@
-# master_thesis_Christina_Petschnig
+# master_thesis_named_entity_recognition
 
 
 Repository Structure
